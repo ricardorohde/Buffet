@@ -1,0 +1,483 @@
+*{
+    padding: 0 auto;
+    margin: 0 auto;
+}
+
+@font-face{
+    font-family: 'Antonellie Callygraphy Demo';
+    src:url('fonts/Antonellie Callygraphy Demo.ttf');
+}
+#containerSegura{
+    width: 100%;
+    height: auto;
+    background: #343a40 ;
+
+}
+#containerSeguracabecalho{
+    width: 100%;
+    height: 100px;
+    background: #343a40;
+    margin: 0 auto;
+}
+#containerSeguraNomeLogo{
+    background: #343a40;
+    padding-top: 20px;
+    padding-left: 25px;
+}
+#containerSeguraInfo{
+    background: none;
+}
+
+#textoLogo{
+    color:white;
+    font-family: 'Arial';
+    font-size: 28pt;
+    text-align: center;
+
+}
+#voltar{
+    color:white;
+    text-decoration: none;
+    float: right;
+}
+#cliqueEdm{
+    background: #1a2225;
+    color:white;
+}
+
+#conteudo{
+    width: 100%;
+    height: 60%;
+    background: #ffffff;
+    float: right;
+    margin-top: 0px;
+    margin: 0 auto;
+    overflow-y: scroll;
+    overflow-y: auto;
+
+
+}
+#menu{
+    width: 100%;
+    margin: 0 auto;
+}
+#DefinirWH{
+    width: 50px;
+    height: 40px;
+    /*border: 1px solid #000;*/
+    float: left;
+    text-align: center;
+}
+#excluir{
+    width: 50%;
+    height: 50%;
+}
+a{
+    text-decoration: none;
+    color:#212529;
+}
+a:hover{
+    text-decoration: none;
+    color:red;
+}
+#DefinirWH2{
+    width: 50px;
+    height: 45px;
+    /*border: 1px solid #000;*/
+    float: left;
+    text-align: center;
+}
+#bloquearDesbloquear{
+    width: 50%;
+    height: 50%;
+}
+#foto{
+    /*border:1px solid #000;*/
+    height: 100%;
+    width: 50px;
+    border-radius: 100%;
+    float: left;
+}
+#foto2{
+    /*border:1px solid #000;*/
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    float: left;
+}
+#table{
+    height: 10px;
+}
+#ajustarImg{
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+#div_cidade{
+    width: auto;
+    height:50px;
+    /*border:1px solid #000;*/
+
+}
+#nome-cidade{
+    outline: none;
+    border:none;
+    border-bottom: 1px solid #dee2e6;
+
+}
+#input-submit{
+    margin-top:11px;
+    height: 40px;
+    outline: none;
+    text-align: center;
+    color: white;
+    font-size: 12px;
+    background: none;
+    border: none;
+}
+#tabela{
+    margin-top: 100px;
+}
+#fotopra{
+    display: none;
+
+}
+#fotopra2{
+    display: none;
+
+}
+#fotoPratosPadrao{
+    width: 100%;
+    height: 100%;
+}
+#foto1{
+    width: 100px;
+    height: 100px;
+}
+#foto3{
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+}
+#input-submitFoto{
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 50%;
+    height: 50px;
+    border:none;
+    color:white;
+}
+#botcadP{
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 50%;
+    height: 50px;
+    border:none;
+    color:white;
+}
+#botcadP2{
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 50%;
+    height: 50px;
+    border:none;
+    color:white;
+}
+#div_foto{
+    margin-top: 10px;
+    margin: 0 auto;
+}
+#subMitFoto{
+    margin: 0 auto;
+    width: 200px;
+}
+#nome-prato{
+    margin-top: 50px;
+    border:none;
+    border-bottom: 1px solid rgb(222, 226, 230);
+    outline: none;
+}
+#ingredientes{
+    width: 325px;
+    height: 226px;
+    margin: 0 auto;
+    overflow-y: auto;
+    overflow-x: auto;
+}
+
+#cardapioPronto{
+    float: left;
+    border: 2px solid #dee2e6;
+    height: 100%;
+}
+#ola{
+    margin-top: 10px;
+    width: 100%;
+    height: 100px;
+    border:none;
+    border: 1px solid rgb(222, 226, 230);
+    margin:0 auto;
+    position: relative;
+}
+#ajustarFOTODOPRATO{
+    width: 70%;
+    height: 70%;
+    position: absolute;
+    border-radius: 5px;
+    top:50%;
+    left: 50%;
+    transform:translate(-50%,-50%);
+    /*border:1px solid #000;*/
+}
+#cardapioControle{
+    width: auto;
+    height:300px;
+    margin: 0 auto;
+    overflow-y: auto;
+    overflow-x: auto; 
+    /*border:1px solid #000;*/
+}
+#nomeDocardapio{
+    margin-bottom: 20px;
+}
+#nomeCardapio{
+    border:none;
+    border-bottom:1px solid rgb(222, 226, 230);
+    outline: none;
+    padding-bottom: 4px;
+    padding-left: 10px;
+
+} 
+#ingCadCar{
+    width: 100%;
+    height: 70px;
+    margin: 0 auto;
+    overflow-y: auto;
+    overflow-x: auto;
+}
+#cadastrocar{
+    color:white;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    /*border:1px solid #000;*/
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 100px;
+    padding-top: 10px;
+    font-size:50px;
+    background-color: #ff0000;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+#cardapio{
+    width: 100%;
+}
+#cardapio2{
+    height: 100%;
+
+}
+#botaoCharme{
+    /*border: 1px solid #000;*/
+    margin-top: 50px;
+    height: 60px;
+    width: 60px;
+    background: #e31e24;
+    border-radius:10px; 
+    color:white;
+    font-size: 25pt;
+}
+/*css-internet*/
+.MultiCarousel { 
+    float: left; 
+    overflow: hidden; 
+    padding: 15px; 
+    width: 100%; 
+    position:relative;
+    height: 400px; 
+}
+.MultiCarousel .MultiCarousel-inner {
+    transition: 1s ease all;
+    float: left; 
+}
+.MultiCarousel .MultiCarousel-inner .item { 
+    float: left;
+}
+.MultiCarousel .MultiCarousel-inner .item > div { 
+    text-align: center;
+    padding:10px;
+    margin:10px; 
+    background:#f1f1f1;
+    color:#666;
+    min-height: 300px; 
+}
+.MultiCarousel .leftLst, .MultiCarousel .rightLst { 
+    position:absolute; border-radius:50%;top:calc(50% - 20px); 
+}
+.MultiCarousel .leftLst { 
+    left:0; 
+}
+.MultiCarousel .rightLst { 
+    right:0; 
+}
+
+.MultiCarousel .leftLst.over, .MultiCarousel .rightLst.over { 
+    pointer-events: none; 
+    background:#ccc;
+}
+#cardapiocontrole{
+    width: auto;
+    height:310px;
+    margin: 0 auto;
+    overflow-y: scroll;
+    overflow-x: auto; 
+}
+#dropdownMenuButton{
+    background: none;
+    outline: none;
+    color:white;
+}
+#menuBtn{
+    width: 50px;
+}
+#home{
+    width: 50px;
+}
+#menuBod{
+    background: #343a40;
+    z-index: 1;
+    height: auto;
+
+}
+
+::-webkit-scrollbar{
+    width: 3px;
+    height: 3px;
+    background-color: white;
+    
+}
+::-webkit-scrollbar-thumb{
+    background-color: #343a40;
+    box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+}
+#boxcardapio{
+    
+}
+#limiteDivCad{
+    width: auto;
+    height:400px;
+    margin: 0 auto;
+    overflow-y: scroll;
+    overflow-x: auto;
+}
+#inputAtualizar{
+    margin: 0 auto;
+}
+#editar{
+    width: 20px;
+    height: 20px;
+   margin-left: 8px;
+}
+#pesquisa{
+    margin-top: 22px;
+    width: auto;
+    height: auto;
+}
+#DivPesquisa{
+  width: 100%;
+  padding: 0px;
+}
+#tabelaPesquisa{
+
+}
+#mypes{
+    height: auto;
+    margin-top: 10px;
+    overflow-y: scroll;
+    overflow-x: auto;
+    margin: 0 auto;
+   
+}
+#organizaTab{
+      height: 60vh;
+    /*border: 1px solid #000;*/
+     margin-left: -80px;
+    
+}
+#OrganizaALl{
+    height: 60vh;
+}
+#organizaTab2{
+    
+
+}
+#agenda{
+    min-width: 1000px;
+    height: 100px;
+    border:1px solid #e5e8eb;
+    border-radius:4px; 
+    box-shadow: 2px 2px 2px rgb(0,0,0,0.2);
+    margin: 0 auto;
+}
+#tabelaAgenda{
+    
+}
+#valido{
+    width: 25px;
+    height: 25px;
+}
+.nome{
+    font-size:16pt;
+    font-family: arial;
+    padding-top:20px; 
+}
+.data{
+    font-size: 12pt;
+    font-family: arial;
+    padding-top:30px; 
+}
+#teste{
+   border:1px solid #000;
+   height: 30px;
+   float: left;
+}
+#inputEvento{
+    width: 100%;
+    border:none;
+    border-bottom: 1px solid gray;
+    outline: none;
+    color:gray;
+}
+#agenda2{
+    width: auto;
+    height:auto;
+    border:1px solid #e5e8eb;
+    border-radius:4px; 
+    box-shadow: 2px 2px 2px rgb(0,0,0,0.2);
+    margin: 0 auto;
+    color:gray;
+    
+}
+
+#inputEven{
+    background: #28a745;
+    border:none;
+    outline: none;
+    color:white;
+    margin: 0 auto;
+    height: 50px;
+    width: 100px;
+    float: right;
+}
+.arruma{
+   
+    margin-top: 10px;
+    font-weight: bold;
+    font-size:10pt;
+    text-align: left;
+    
+}
