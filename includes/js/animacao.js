@@ -1,19 +1,21 @@
-var $pegaObjeto = $('.anime'), animacaoDaclasse = 'anime-start',offset = $(window).height() *3/4;
+var $pegaObjeto = $('.anime'),
+    animacaoDaclasse = 'anime-start',
+    offset = $(window).height() * 3 / 4;
 
-function animacao(){
+function animacao() {
     var documentTop = $(document).scrollTop();
-    $pegaObjeto.each(function(){
-        console.log(documentTop);
+    $pegaObjeto.each(function() {
+        //console.log(documentTop);
         var itemTop = $(this).offset().top;
-        if(documentTop > itemTop - offset){
+        if (documentTop > itemTop - offset) {
             $(this).addClass(animacaoDaclasse);
-        }else{
-             $(this).removeClass(animacaoDaclasse);
+        } else {
+            $(this).removeClass(animacaoDaclasse);
         }
     });
-    
+
 }
 
-$(document).scroll(function(){
+$(document).scroll(function() {
     animacao();
 });

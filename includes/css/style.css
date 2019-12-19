@@ -1,329 +1,347 @@
-@font-face{
+@font-face {
     font-family: 'Antonellie Callygraphy Demo';
-    src:url('fonts/Antonellie Callygraphy Demo.ttf');
+    src: url('fonts/Antonellie Callygraphy Demo.ttf');
 }
-*{
-	scroll-behavior:smooth;
+
+* {
+    scroll-behavior: smooth;
 }
-.body{
-    padding: 0;
-}
+
+
 /*animação*/
-.anime{
-    opacity:0;
-    transform: translate3d(-150px,0,0);
-    transition: .3s;
-}
-.anime-start{
-    opacity:1;
-    transform: translate3d(0,0,0);
+
+.anime {
+    opacity: 0;
+    transform: translate3d(-150px, 0, 0);
     transition: .3s;
 }
 
+.anime-start {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    transition: .3s;
+}
+
+
 /*fimanimação*/
-#fundogeralInicial{
+
+#fundogeralInicial {
     min-height: 100vh;
-    background:url(../img/fundo.jpg);
+    background: url(../img/fundo.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    background-position:center;
-
+    background-position: center;
 }
-#seguraDivbtn{
+
+#seguraDivbtn {
     float: right;
 }
-#botaoEntrarCad{
-   padding-left: 6px;
-    width:120px;
-    background: white;
-    color:red;
-    font-weight: 600;
-    
-}
 
-#cabecalho-menu{
+#cabecalho-menu {
     min-height: 50px;
     width: 100%;
     background: #ff4040;
     position: fixed;
-    top:0;
+    top: 0;
     z-index: 1;
 }
-#cabecalho-textoelogo{
+
+#cabecalho-textoelogo {
     min-height: 300px;
     /* background: green;*/
     padding-top: 140px;
 }
-#cabecalho-texto{
+
+#cabecalho-texto {
     /*background: orange;*/
     text-align: center;
     text-justify: auto;
-    color:white;
-    padding-top:80px;
+    color: white;
+    padding-top: 80px;
     font-family: arial;
     font-weight: 600;
     text-shadow: 1px 3px 3px #000;
     margin-top: 30px;
-
 }
-#cabecalho-logo{
+
+#cabecalho-logo {
     background: none;
 }
-#cabecalho-logo #img{
+
+#cabecalho-logo #img {
     width: 100%;
-    height:100%;
+    height: 100%;
     margin: 0 auto;
     border-left: 1px solid #fff;
-
 }
 
+
 /*Aqui chamativo*/
-#chmaratencao{
-    height: 88vh;
-    background-image: url(../img/foto-chamativa.jpg);
+
+#chmaratencao {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    background-position:center;
+    background-position: center;
 }
-#segura{
+
+#segura {
     height: 100%;
-
 }
-#coluna-1{
 
+#coluna-1 {
     background: white;
     padding-top: 20px;
     padding-bottom: 20px;
 }
-#coluna-2{
+
+#coluna-2 {
     transition: 1.3s;
-    background: rgb(0,0,0);
+    background: rgb(0, 0, 0);
 }
 
-#coluna-3{
+#coluna-3 {
     background: white;
     padding-top: 20px;
     padding-bottom: 20px;
 }
-#divConteudo{
+
+#divConteudo {
     transition: 1.3s;
     background: none;
     height: 95%;
     margin-top: 15px;
-    border:4px solid #fff;
+    border: 4px solid #fff;
 }
-#texto-coluna-2{
-    color:red;
+
+#texto-coluna-2 {
+    color: red;
     text-align: center;
     margin-top: 10px;
     font-size: 18pt;
     font-family: 'Antonellie Callygraphy Demo';
 }
-#texto2-coluna-2{
-    color:white;
+
+#texto2-coluna-2 {
+    color: white;
     text-align: center;
     margin-top: 10px;
     font-size: 18pt;
     font-family: 'arial';
 }
-#texto3-coluna-2{
-    color:white;
+
+#texto3-coluna-2 {
+    color: white;
     margin-top: 10px;
     font-size: 13pt;
     font-family: 'arial';
     font-style: italic;
 }
+
+
 /* aqui e as img*/
 
-#img_1{
+#img_1 {
     height: 50%;
-
-    width: 90%;
-    margin: 0 auto;
-}
-#img_2{
-    height: 50%;
-
     width: 90%;
     margin: 0 auto;
 }
 
-#img_4{
+#img_2 {
     height: 50%;
-
-    width: 90%;
-    margin: 0 auto;
-}
-#img_5{
-    height: 50%;
-
     width: 90%;
     margin: 0 auto;
 }
 
-#seguraIMG{
+#img_4 {
+    height: 50%;
+    width: 90%;
+    margin: 0 auto;
+}
+
+#img_5 {
+    height: 50%;
+    width: 90%;
+    margin: 0 auto;
+}
+
+#seguraIMG {
     text-align: center;
-
     min-height: 30%;
     padding: 20px;
-
-
 }
-#img-img1{
+
+#img-img1 {
     width: 40%;
     height: 50%;
-
 }
-#img-img2{
 
+#img-img2 {
     width: 50%;
     height: 50%;
-    margin-left:20px;
-
-
+    margin-left: 20px;
 }
-#img-img3{
+
+#img-img3 {
     width: 50%;
     height: 55%;
-
-    margin-top:10px;
-
+    margin-top: 10px;
 }
-#img-img4{
+
+#img-img4 {
     width: 50%;
     height: 50%;
-    margin-top:20px;
-    margin-left:20px;
-
+    margin-top: 20px;
+    margin-left: 20px;
 }
+
+
 /**/
-/*aqui eo hover*/ 
 
 
-#coluna-2:hover{
+/*aqui eo hover*/
+
+#coluna-2:hover {
     transition: 2.5s;
-    background:rgba(0,0,0,0.6);
-
+    background: rgba(0, 0, 0, 0.6);
 }
-#coluna-2:hover >#divConteudo{
+
+#coluna-2:hover>#divConteudo {
     transition: 2.5s;
-    border:4px solid red;
-
+    border: 4px solid red;
 }
+
+
 /**/
+
+
 /**/
+
+
 /*aqui e style do carousel*/
 
-#caixacarousel{
+#caixacarousel {
     height: 600px;
-    margin: 0 auto;
-    padding: 0px;
     margin-top: 10px;
     /*border:1px solid #000;*/
 }
-#seguraimgCarousel{
+
+#seguraimgCarousel {
     width: 100%;
     height: 100%;
 }
-#a{
+
+#a {
     width: 100%;
-    height:auto;
+    height: auto;
 }
+
 
 /*inputs*/
-#inputs{
+
+#inputs {
     width: 100%;
     outline: none;
-    border:none;
-    border-bottom:1px solid rgb(221, 223, 226);
+    border: none;
+    border-bottom: 1px solid rgb(221, 223, 226);
     border-radius: 2px;
     appearance: none;
-
-
 }
 
-#inputs:focus{
+#inputs:focus {
     width: 100%;
     outline: none;
-    border:none;
+    border: none;
     border-bottom: 2px solid red;
-
 }
-#senha{
+
+#senha {
     width: 100%;
     outline: none;
-    border:none;
-    border-bottom:1px solid rgb(221, 223, 226);
+    border: none;
+    border-bottom: 1px solid rgb(221, 223, 226);
     border-radius: 2px;
-
-
 }
-#senha:focus{
+
+#senha:focus {
     width: 100%;
     outline: none;
-    border:none;
+    border: none;
     border-bottom: 2px solid red;
-
 }
-#erroSenhaForca{
+
+#erroSenhaForca {
     border: none;
     border-bottom: 1px solid #e2e5e9;
-    
 }
+
+
 /*Footer footer*/
-#footer{
-	width:100%;
-	height:150px;
-	background:#ff4040;
-	color:white;
+
+#footer {
+    width: 100%;
+    height: 150px;
+    background: #ff4040;
+    color: white;
 }
 
-@media (max-width:767px){
-	#footer h5 {
-    padding-left: 0;
-    border-left: transparent;
-    padding-bottom: 0px;
-    margin-bottom: 10px;
+@media (max-width:767px) {
+    #footer h5 {
+        padding-left: 0;
+        border-left: transparent;
+        padding-bottom: 0px;
+        margin-bottom: 10px;
+    }
 }
-}
-.teste{text-align: center;}
-#hoverLevan:hover 
 
-/* texto de saudacao usando sessao */#teste{
-    
+.teste {
+    text-align: center;
 }
-#fotoUsu{
+
+#hoverLevan:hover
+/* texto de saudacao usando sessao */
+
+#teste {}
+
+#fotoUsu {
     display: none;
     margin: 0 auto;
 }
-#textoSaudacao{
+
+#textoSaudacao {
     float: right;
-    color:white;
+    color: white;
     font-family: 'arial';
     margin-top: 13px;
 }
+
+
 /*botao sair*/
 
-#sair{
+
+/*
+#sair {
     background: none;
     border: none;
     border: 1px solid #fff;
-    color:#fff;
+    color: #fff;
     right: 0;
     width: 60px;
     height: 40px;
     margin-top: 10px;
     text-align: center;
     padding-top: 4px;
-   
 }
-#adm{
+*/
+
+
+/*
+#adm {
     background: none;
     border: none;
     border: 1px solid #fff;
-    color:#fff;
+    color: #fff;
     right: 0;
     width: 90px;
     height: 40px;
@@ -331,202 +349,179 @@
     text-align: center;
     padding-top: 4px;
     float: right;
-   
 }
+*/
 
-#styletextoSair{
-    color:white;
-}
-#styletextoAdim{
-    color:white;
-}
-#styletextoSair:hover ~ #sair{
-    box-shadow: 2px 1px 1px rgb(0,0,0,0.1);
-}
-#sair:focus{
-     border: 1px solid #fff3cd;
-}
 
 /*pefil*/
-#foto{
+
+#foto {
     height: 120px;
     margin-bottom: 10px;
     margin-left: 190px;
-    
 }
-#nome{
+
+#nome {
     height: 50px;
-    
 }
-#nome-input{
-    float:left;
+
+#nome-input {
+    float: left;
 }
-#senha-texto{
-   float: left;
+
+#senha-texto {
+    float: left;
 }
-#fotoUsuario{
-    width:24%;
+
+#fotoUsuario {
+    width: 24%;
     height: 100%;
     border-radius: 100%;
     margin: 0 auto;
-    
 }
-#nomes{
-    color:#6c757d;
+
+#nomes {
+    color: #6c757d;
 }
-#AjustarFotoUsuario{
+
+#AjustarFotoUsuario {
     width: 100%;
     height: 100%;
     border-radius: 100%;
 }
-/**/
-/*aqui e minha responsividade*/
-@media screen and (max-width: 768px) {
 
-    #fundogeralInicial{
+
+/**/
+
+
+/*aqui e minha responsividade*/
+
+@media screen and (max-width: 768px) {
+    #fundogeralInicial {
         min-height: 200px;
-        background:url(../img/fundoCopia.jpg);
+        background: url(../img/fundoCopia.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         background-attachment: fixed;
-        background-position:center;
-
+        background-position: center;
     }
-    #cabecalho-textoelogo{
+    #cabecalho-textoelogo {
         /* background: green;*/
         padding-top: 0px;
     }
-    #cabecalho-logo #img{
-        border:none;
-        border-top:1px solid #fff;
-
-
+    #cabecalho-logo #img {
+        border: none;
+        border-top: 1px solid #fff;
     }
-    #caixacarousel{
+    #caixacarousel {
         height: auto;
-
     }
-    #divConteudo{
+    #divConteudo {
         transition: 1.3s;
         background: none;
         height: 95%;
         margin-top: 15px;
-        border:4px solid #fff;
+        border: 4px solid #fff;
         width: 100%;
     }
-
-
 }
+
 @media screen and (max-width: 1100px) {
-    #texto3-coluna-2{
-        color:white;
+    #texto3-coluna-2 {
+        color: white;
         margin-top: 10px;
         font-size: 12pt;
         font-family: 'arial';
         font-style: italic;
-
     }
-    #img-img1{
+    #img-img1 {
         width: 65%;
         height: 50%;
-
     }
-    #img-img2{
-
+    #img-img2 {
         width: 65%;
         height: 50%;
-
-
     }
-    #img-img3{
+    #img-img3 {
         width: 70%;
         height: 55%;
-        margin-left:40px;
-        margin-top:10px;
-
+        margin-left: 40px;
+        margin-top: 10px;
     }
-    #img-img4{
+    #img-img4 {
         width: 65%;
         height: 50%;
-        margin-top:20px;
-
+        margin-top: 20px;
     }
 }
+
 @media screen and (max-width: 1200px) {
-    #texto3-coluna-2{
-        color:white;
+    #texto3-coluna-2 {
+        color: white;
         margin-top: 10px;
         font-size: 12pt;
         font-family: 'arial';
         font-style: italic;
         text-justify: justify;
     }
-    #img-img1{
+    #img-img1 {
         width: 60%;
         height: 50%;
-
     }
-    #img-img2{
-
+    #img-img2 {
         width: 55%;
         height: 50%;
-
-
     }
-    #img-img3{
+    #img-img3 {
         width: 60%;
         height: 55%;
-        margin-left:40px;
-        margin-top:10px;
-
+        margin-left: 40px;
+        margin-top: 10px;
     }
-    #img-img4{
+    #img-img4 {
         width: 55%;
         height: 50%;
-        margin-top:20px;
-
+        margin-top: 20px;
     }
 }
-@media screen and (max-width: 320px){
-    #chmaratencao{
+
+@media screen and (max-width: 320px) {
+    #chmaratencao {
         height: 600px;
         background-image: url(../img/foto-chamativa.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         background-attachment: fixed;
-        background-position:center;
+        background-position: center;
     }
-
-
 }
-#notificacao{
+
+#notificacao {
     width: 30px;
     height: 30px;
 }
-#excluirNot{
+
+#excluirNot {
     width: 10px;
     height: 10px;
 }
-.padraoIn{
+
+.padraoIn {
     border: none;
-    border-bottom:1px solid #f3f3f4;
+    border-bottom: 1px solid #f3f3f4;
     outline: none;
 }
-.orgIcon{
-	width:65px;
-	height:70px;
-	margin-left:10px;
-	margin-top:30px;
-}
-#informanot{
-    position:absolute;
-    left: 6.1%;
-    top:70%;
-    color:red;
-    background: white;
-    width: 20px;
-    height: 20px;
-    border-radius: 100%;
-    text-align: center;
+
+.orgIcon {
+    width: 65px;
+    height: 70px;
+    margin-left: 10px;
+    margin-top: 30px;
 }
 
+#informanot {
+    position: absolute;
+    left: 6.1%;
+    top: 70%;
+    text-align: center;
+}

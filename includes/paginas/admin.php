@@ -1,6 +1,7 @@
 <?php
 session_start();
-include_once '../classes/Funcao.php';
+include_once('../classes/Conexao.php');
+include_once('../classes/Funcao.php');
 if ($_SESSION['nivelAcesso'] == 1) {
     header('Location: ../../index.php');
 }else{
@@ -36,10 +37,12 @@ if (isset($_POST['pesquisaAlgo'])) {
         <title>TCC</title>
         <link rel="stylesheet" type="text/css" href="../node_modules/bootstrap/compiler/bootstrap.css"/>
         <link rel="stylesheet" type="text/css" href="./../css/admin.css"/>
-        <script type="text/javascript" src="../jquery/jquery.min.js"></script>
-        <script type="text/javascript" src="../sweet/sweetalert.min.js"></script>
-        <script type="text/javascript" src="../js/cardapio.js"></script>
-        <script type="text/javascript">
+        <script src="//code.jquery.com/jquery-2.0.3.min.js"></script>
+        <script src="../node_modules/jquery/dist/jquery.js"></script>
+        <!--script src="../jquery/jquery.min.js"></script-->
+        <script src="../sweet/sweetalert.min.js"></script>
+        <script src="../js/cardapio.js"></script>
+        <script>
             function invalidar(id) {
                 var confirmacao = confirm('Deseja mesmo invalidar essa requisição?');
                 var des = prompt("Qual motivo?");
@@ -449,7 +452,7 @@ if (isset($_POST['pesquisaAlgo'])) {
                         </div>
                     </div>
                     <div class="row" id="subMitFoto">
-                        <input type="submit" class=" col-12 border bg-danger" value="Atualizar" name="AtualizarCar" id="botcadP2">
+                        <input type="submit" class=" col-12 border bg-danger" value="Atualizar" name="AtualizarCar" id="botcadP2" />
 
                     </div>     
                 </form>
@@ -572,17 +575,6 @@ if (isset($_POST['pesquisaAlgo'])) {
 <?php } ?>
 
 
-
-
-<!-- Optional JavaScript -->
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script type="text/javascript" src="../js/confirmacao.js"></script>
-<script type="text/javascript" src="../sweet/sweetalert.min.js"></script>
-<script src="//code.jquery.com/jquery-2.0.3.min.js"></script>
-<script src="//assets.locaweb.com.br/locastyle/2.0.6/javascripts/locastyle.js"></script>
-<script src="../node_modules/jquery/dist/jquery.js"></script>
-<script src="../node_modules/popper.js/dist/umd/popper.js"></script>
-<script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
 <script type="text/javascript">
         $("#editarCar").on('show.bs.modal', function(event) {
             var button = $(event.relatedTarget);
@@ -617,11 +609,19 @@ if (isset($_POST['pesquisaAlgo'])) {
             });
         });
 
-
-
-
-
 </script>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="../js/confirmacao.js"></script>
+<script src="../sweet/sweetalert.min.js"></script>
+<script src="../node_modules/popper.js/dist/umd/popper.js"></script>
+<script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+
+
+
+
+
+
 
 
 

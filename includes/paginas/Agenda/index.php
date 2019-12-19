@@ -1,5 +1,6 @@
 <?php
 session_start();
+include_once("../../classes/Conexao.php");
 include_once '../../classes/Funcao.php';
 if(!isset($_SESSION['codigo'])){
     header('Location: ../../../index.php');

@@ -15,8 +15,10 @@ class funcao extends Conexao {
         try {
             foreach ($item as $row) {
                 ?>
-                <option value = "<?php echo $row['cid_codigo']; ?>"><?php echo $row['cid_nome'] . " - " . $row['cid_estado']; ?></option>
-                <?php
+    <option value="<?php echo $row['cid_codigo']; ?>">
+        <?php echo $row['cid_nome'] . " - " . $row['cid_estado']; ?>
+    </option>
+    <?php
             }
         } catch (PDOexception $e) {
             echo "Error is: " . $e->etmessage();
@@ -479,9 +481,16 @@ class funcao extends Conexao {
         }
     }
 
-    function informaBotao() {
+    function informaBotao($noticacao) {
+        if($noticacao > 0){
+            $badge = '';
+            $badge .= '<div class="badge badge-light" id="informanot">';
+            $badge .= "$noticacao";
+            $badge .= '</div>';
+        }else{
+        $badge = '';
+        }
         if (isset($_SESSION['codigo'])) {
-            echo '<div class="row h-100  container p-0 float-right">';
             if ($_SESSION['nivelAcesso'] == 1) {
 
                 if ($_SESSION['sexo'] == "m") {
@@ -496,18 +505,62 @@ class funcao extends Conexao {
                         echo '<div class="col-3 float-right  "><div id= "sair"> <a href="?sair" id="styletextoSair">Sair</a></div></div>';
                     }
                 }
-                echo '</div>';
             } else {
                 if ($_SESSION['nivelAcesso'] == 2) {
-                    echo '<div class="col-9 d-none d-lg-block "><div id= "adm"><a href="includes/paginas/admin.php" id="styletextoAdim">Administrar</a></div></div>';
-                    echo '<div class="col-3 float-right  "><div id= "sair"> <a href="?sair" id="styletextoSair">Sair</a></div>';
-                    echo '</div>';
+                    echo'
+                        <div style="min-width:250px;" class="row p-0 m-0">
+                            <div class="col-md-2 p-0 m-0">
+                                <a class="p-0 m-0">
+                                    <button class="form-control btn btn-dark m-0"  data-toggle="modal" data-target="#myperfil">
+                                        <i class="fa fa-user-circle"></i>
+                                    </button>
+                                </a>
+                                '.$badge.'
+                            </div>
+                            <div class="col-md-6 p-0 mt-1 mt-md-0 m-0 pl-md-1">
+                                <button type="button" class=" small form-control btn btn-outline-dark text-white" id="adm">
+                                    <a class="text-white" href="includes/paginas/admin.php" class="small" id="styletextoAdim">
+                                        <small>
+                                            <i class="fas fa-briefcase"></i> Adiministrar
+                                        </small>
+                                    </a>
+                                </button>
+                            </div>
+                            <div class="col-md-4 p-0 m-0 mt-1 mt-md-0 pl-md-1">
+                                <a class="text-white" href="?sair">
+                                    <button type="button" class=" small form-control btn btn-outline-dark text-white" id="sair">
+                                        <small>
+                                            <i class="fa fa-sign-out-alt"></i> Sair
+                                        </small>
+                                    </button>
+                                </a>
+                            </div>
+                        </div>
+                    ';
                 }
             }
         } else {
 
-            echo '<button type="button" class="btn  float-right ml-2 mt-2 "  data-toggle="modal" data-target="#mylogin"     id="botaoEntrarCad">Entrar</button>
-                                      <button type="button" class="btn  float-right ml-0 mt-2"   data-toggle="modal" data-target="#mycadastro"  id="botaoEntrarCad">Cadastre-se</button>';
+            echo '
+                <div style="min-width:190px;" class="row p-0 m-0">
+                    <div class="col-md-5 p-0 mt-1 mt-md-0 m-0">
+                        <button type="button" class=" small form-control btn btn-outline-dark text-white" data-toggle="modal" data-target="#mylogin" id="botaoEntrarCad">
+                            <small>
+                                <i class="fas fa-users"></i> Entrar
+                            </small>
+                        </button>
+                    </div>
+                    <div class="col-md-7 p-0 m-0 mt-1 mt-md-0 pl-md-1">
+                        <button type="button" class=" small form-control btn btn-outline-dark text-white" data-toggle="modal" data-target="#mycadastro"  id="botaoEntrarCad">
+                            <small>
+                                Cadastre-se
+                            </small>
+                        </button>
+                    </div>
+                </div>
+                
+                
+                ';
         }
     }
 
@@ -1668,5 +1721,3 @@ if (isset($_GET['id2'])) {
     $funcao->editPrato($_GET['id2']);
 }
 ?>
-
-
