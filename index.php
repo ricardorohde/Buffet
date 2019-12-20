@@ -47,7 +47,7 @@ if (isset($_GET['sair'])) {
                             case "cardapio":
 
                                 /**************** Home Inicial *****************/
-                                include_once('includes/paginas/');
+                                include_once('includes/paginas/sistem/cardapio.php');
                                 /***********************************************/
 
                                 break;
