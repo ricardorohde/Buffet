@@ -51,6 +51,14 @@ if (isset($_GET['sair'])) {
                                 /***************************************************/
 
                                 break;
+
+                            default :
+                                
+                                /**************** Home Inicial *****************/
+                                include_once('includes/paginas/sistem/home.php');
+                                /***********************************************/
+                            
+                            break;
                         } 
                     }else{
 

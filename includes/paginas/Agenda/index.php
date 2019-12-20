@@ -47,7 +47,6 @@ $item = $buscarEvento->buscaAgendaFull();
             });
         </script>
 
-
 </head>
 <body>
     <section id="Geral" class=" m-0">
@@ -77,15 +76,15 @@ $item = $buscarEvento->buscaAgendaFull();
                 </div>
                 <div class="row border pt-2 pb-2">
                     <div class="mr-auto"></div>
-                    <div class="col-12 col-md-2 p-1 pt-2 pt-md-0 text-center" >
-                        <a  href="index.php">
-                            <button class="form-control btn btn-dark mr-1"type="button" id="requisitar" required="">Voltar</button>
-                        </a>
-                    </div>
                     <div class="col-12 col-md-2 p-1 pt-2 pt-md-0 text-center">
                         <button class="form-control btn btn-success" type="submit" value="Requisitar" name="requisitar">
                             Requisitar
                         </button>
+                    </div>
+                    <div class="col-12 col-md-2 p-1 pt-2 pt-md-0 text-center" >
+                        <a  href="index.php">
+                            <button class="form-control btn btn-dark mr-1"type="button" id="requisitar" required="">Voltar</button>
+                        </a>
                     </div>
                 </div>
             </form>

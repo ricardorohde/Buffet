@@ -1394,7 +1394,7 @@ class funcao extends Conexao {
                     <div class="item" id="cardapioControle">
                         <div class="pad15" id="ola">
                             <div class="row bg-dark p-0">
-                                <div class="col-md-12 m-0 p-0">
+                                <div class="col-md-12 m-0 p-1">
                                     <input type="radio" name="meuCar" value="' . $row['cf_codigo'] . '">
                                 </div>
                             </div>
@@ -1430,8 +1430,8 @@ class funcao extends Conexao {
                     echo '<div class="item" id="cardapioControle">
                         <div class="pad15" id="ola">
                             <div class="row bg-dark p-0">
-                                <div class="col-md-12 m-0 p-0">
-                                    <input type="radio" name="meuCar" value="' . $row['cf_codigo'] . '">
+                                <div class="col-md-12 m-0 p-1">
+                                    <input class="p-0 m-0" type="radio" name="meuCar" value="' . $row['cf_codigo'] . '">
                                 </div>
                             </div>
                             <div class="row border rounded-bottom p-0">
