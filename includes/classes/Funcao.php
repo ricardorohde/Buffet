@@ -493,20 +493,29 @@ class funcao extends Conexao {
         if (isset($_SESSION['codigo'])) {
             if ($_SESSION['nivelAcesso'] == 1) {
 
-                if ($_SESSION['sexo'] == "m") {
-                    echo '<div class="col-9 d-none d-lg-block "><span  class = "d-none d-lg-block" id="textoSaudacao">Seja bem-vindo, ' . $_SESSION['nome'] . '</span></div>';
-                    echo '<div class="col-3 float-right  "><div id= "sair"> <a href="?sair" id="styletextoSair">Sair</a></div></div>';
-                } else {
-                    if ($_SESSION['sexo'] == "f") {
-                        echo '<div class="col-9 d-none d-lg-block "><span  class = "d-none d-lg-block" id="textoSaudacao">Seja bem-vinda, ' . $_SESSION['nome'] . '</span></div>';
-                        echo '<div class="col-3  "><div id= "sair"> <a href="?sair" id="styletextoSair">Sair</a></div></div>';
-                    } else {
-                        echo '<div class="col-9 d-none d-lg-block "><span  class = "d-none d-lg-block" id="textoSaudacao">Seja bem-vindo(a) ' . $_SESSION['nome'] . '</span></div>';
-                        echo '<div class="col-3 float-right  "><div id= "sair"> <a href="?sair" id="styletextoSair">Sair</a></div></div>';
-                    }
-                }
-            } else {
-                if ($_SESSION['nivelAcesso'] == 2) {
+                echo '
+                    <div style="min-width:250px;" class="row p-0 m-0">
+                        <div class="col-md-8 p-0 m-0">
+                                <a class="p-0 m-0">
+                                    <button class="form-control btn btn-dark m-0"  data-toggle="modal" data-target="#myperfil">
+                                        <i class="fa fa-user-circle"></i> ' . $_SESSION['nome'] . '
+                                    </button>
+                                </a>
+                                '.$badge.'
+                        </div>
+                        <div class="col-md-4 p-0 m-0 mt-1 mt-md-0 pl-md-1">
+                                <a class="text-white" href="?sair">
+                                    <button type="button" class="small form-control btn btn-outline-dark text-white" id="sair">
+                                        <small>
+                                            <i class="fa fa-sign-out-alt"></i> Sair
+                                        </small>
+                                    </button>
+                                </a>
+                            </div>
+                    </div>
+                ';
+
+            } else if ($_SESSION['nivelAcesso'] == 2) {
                     echo'
                         <div style="min-width:250px;" class="row p-0 m-0">
                             <div class="col-md-2 p-0 m-0">
@@ -537,7 +546,7 @@ class funcao extends Conexao {
                             </div>
                         </div>
                     ';
-                }
+                
             }
         } else {
 
@@ -1704,7 +1713,7 @@ class funcao extends Conexao {
     function apagarNot($id) {
         $query = "UPDATE agenda SET age_confirma = 1 WHERE age_codigo = $id";
         $resultado = $this->execute($query);
-       echo "<script> swal('Excluido!').then((value) => {location.assign('index.php')});</script>";
+        echo "<script> swal('Excluido!').then((value) => {location.assign('index.php')});</script>";
     }
 
 //1 invalido

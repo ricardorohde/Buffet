@@ -1,10 +1,13 @@
 <?php
 session_start();
-include_once("../../classes/Conexao.php");
-include_once '../../classes/Funcao.php';
+
 if(!isset($_SESSION['codigo'])){
     header('Location: ../../../index.php');
 }
+
+include_once("../../classes/Conexao.php");
+include_once('../../classes/Funcao.php');
+
 $buscarEvento = new funcao();
 $item = $buscarEvento->buscaAgendaFull();
 ?>
@@ -15,42 +18,42 @@ $item = $buscarEvento->buscaAgendaFull();
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <link href="css/sytleCssIndex.css" rel="stylesheet"/>
         <link rel="stylesheet" type="text/css" href="../../node_modules/bootstrap/compiler/bootstrap.css"/>
+        <link href='css/fullcalendar.min.css' rel='stylesheet' />
+        <link href='css/fullcalendar.print.min.css' rel='stylesheet' media='print'/>
+        <link href='css/personalizado.css' rel='stylesheet'/>
+        <script src="//code.jquery.com/jquery-2.0.3.min.js"></script>
+        <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
         <script type="text/javascript" src="../../jquery/jquery.min.js"></script>
-        <script type="text/javascript" src="../../js/cardapio.js"/></script>
-    <script  type="text/javascript"src="js/sweet/sweetalert.min.js"></script>
-    <link href='css/fullcalendar.min.css' rel='stylesheet' />
-    <link href='css/fullcalendar.print.min.css' rel='stylesheet' media='print'/>
-    <link href='css/personalizado.css' rel='stylesheet'/>
+        <script src='js/jquery.min.js'></script>
+        <script type="text/javascript" src="../../js/cardapio.js"></script>
+        <script  type="text/javascript"src="js/sweet/sweetalert.min.js"></script>
 
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $('#calendar').fullCalendar({
-                header: {
-                    left: 'prev,next today',
-                    center: 'title',
-                    right: 'month'
-                },
-                defaultDate: Date(),
-                navLinks: true, // can click day/week names to navigate views
-                editable: false,
-                eventLimit: true, // allow "more" link when too many events
-                events: [
-<?php
-foreach ($item as $row) {
-    ?>
-                        {
-                            id: '<?php echo $row['age_codigo']; ?>',
-                            title: '<?php echo$row['age_title']; ?>',
-                            start: '<?php echo $row['age_start']; ?>',
-                            end: '<?php echo $row['age_end']; ?>',
-                            color: '<?php echo $row['age_color']; ?>',
-                        },<?php
-}
-?>
-                ]
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('#calendar').fullCalendar({
+                    header: {
+                        left: 'prev,next today',
+                        center: 'title',
+                        right: 'month'
+                    },
+                    defaultDate: Date(),
+                    navLinks: true, // can click day/week names to navigate views
+                    editable: false,
+                    eventLimit: true, // allow "more" link when too many events
+                    events: [
+                        <?php foreach ($item as $row) { ?>
+                            {
+                                id: '<?php echo $row['age_codigo']; ?>',
+                                title: '<?php echo$row['age_title']; ?>',
+                                start: '<?php echo $row['age_start']; ?>',
+                                end: '<?php echo $row['age_end']; ?>',
+                                color: '<?php echo $row['age_color']; ?>',
+                            },
+                        <?php } ?>
+                    ]
+                });
             });
-        });
-    </script>
+        </script>
 
 
 </head>
@@ -59,11 +62,8 @@ foreach ($item as $row) {
         <section class="container-fluid" >
             <form method="POST" action="">
                 <div class="row" id="formulario">
-
                     <div class="MultiCarousel col-12 " data-items="1,3,5,6" data-slide="1" id="MultiCarousel"  data-interval="1000">
                         <div class="MultiCarousel-inner" title="cardapios" >
-
-
                             <?php
                             $exibirCardapio = new funcao();
                             $item = $exibirCardapio->exibecar4();
@@ -121,13 +121,9 @@ foreach ($item as $row) {
         }
     }
     ?>
-    <script src="//code.jquery.com/jquery-2.0.3.min.js"></script>
-    <script src="//assets.locaweb.com.br/locastyle/2.0.6/javascripts/locastyle.js"></script>
-    <script src="../../node_modules/jquery/dist/jquery.js"></script>
-    <script src="../../node_modules/popper.js/dist/umd/popper.js"></script>
-    <script src="../../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="../../node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src='js/moment.min.js'></script>
-    <script src='js/jquery.min.js'></script>
     <script src='js/fullcalendar.min.js'></script>
     <script src='locale/pt-br.js'></script>
 

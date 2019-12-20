@@ -39,10 +39,7 @@
 }
 
 #cabecalho-menu {
-    min-height: 50px;
-    width: 100%;
     background: #ff4040;
-    position: fixed;
     top: 0;
     z-index: 1;
 }
@@ -317,42 +314,6 @@
 }
 
 
-/*botao sair*/
-
-
-/*
-#sair {
-    background: none;
-    border: none;
-    border: 1px solid #fff;
-    color: #fff;
-    right: 0;
-    width: 60px;
-    height: 40px;
-    margin-top: 10px;
-    text-align: center;
-    padding-top: 4px;
-}
-*/
-
-
-/*
-#adm {
-    background: none;
-    border: none;
-    border: 1px solid #fff;
-    color: #fff;
-    right: 0;
-    width: 90px;
-    height: 40px;
-    margin-top: 10px;
-    text-align: center;
-    padding-top: 4px;
-    float: right;
-}
-*/
-
-
 /*pefil*/
 
 #foto {
@@ -487,7 +448,6 @@
 
 @media screen and (max-width: 320px) {
     #chmaratencao {
-        height: 600px;
         background-image: url(../img/foto-chamativa.jpg);
         background-repeat: no-repeat;
         background-size: cover;
