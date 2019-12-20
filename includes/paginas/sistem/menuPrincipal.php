@@ -2,33 +2,33 @@
     <nav class="col-12 navbar navbar-expand-md navbar-dark m-0 p-0">
         <a class="navbar-brand h1 mb-0" href="index.php">
             <small>
-                                <i class="fa fa-home"></i>
-                            </small> Inicio
+                <i class="fa fa-home"></i>
+            </small> Inicio
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsite">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
+            <span class="navbar-toggler-icon"></span>
+        </button>
         <div class="collapse navbar-collapse" id="navbarsite">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item text-center">
                     <a class="nav-link text-light" href="includes/paginas/galeria/index.html">
                         <small>
-                                            <i class="fa fa-images"></i> Galeria
-                                        </small>
+                            <i class="fa fa-images"></i> Galeria
+                        </small>
                     </a>
                 </li>
                 <?php
                                         if (isset($_SESSION['codigo'])) {
                                             echo '
                                                 <li class="nav-item text-light text-center">
-                                                    <a class="nav-link text-light"  href="includes/paginas/Agenda/index.php" >
+                                                    <a class="nav-link text-light"  href="?pg=cardapio" >
                                                         <small>
                                                             <i class="fa fa-utensils"></i> Cardápios
                                                         </small>
                                                     </a>
                                                 </li>
                                                 <li class="nav-item text-center">
-                                                    <a class="nav-link text-light" href="includes/paginas/Agenda/index.php">
+                                                    <a class="nav-link text-light" href="?pg=agenda">
                                                         <small>
                                                             <i class="fas fa-calendar-alt"></i> Agenda
                                                         </small>
@@ -59,8 +59,8 @@
                     <li class="nav-item text-center">
                         <a class="nav-link text-light" href="#footer">
                             <small>
-                                                <i class="fas fa-headset"></i> Contato
-                                            </small>
+                                <i class="fas fa-headset"></i> Contato
+                            </small>
                         </a>
                     </li>
             </ul>
