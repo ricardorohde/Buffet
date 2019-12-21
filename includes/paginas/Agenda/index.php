@@ -1,12 +1,23 @@
 <?php
-/*
+
 if(!isset($_SESSION['codigo'])){
     header('Location: ../../../index.php');
 }
-*/
 
 $buscarEvento = new funcao();
 $item = $buscarEvento->buscaAgendaFull();
+
+
+    if (isset($_POST['requisitar'])) {
+        if (isset($_POST['meuCar']) && isset($_POST['agenda'])) {
+            $cadatrarAgenda = new funcao;
+            $agenda = $cadatrarAgenda->agendar($_SESSION['codigo'], $_POST['meuCar'], $_POST['agenda']);
+            print_r($_SESSION['codigo']);
+        } else {
+            echo "<script> swal('prencha corretamente os campos!').then((value) => {location.assign('index.php')});</script>";
+        }
+    }
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -19,8 +30,9 @@ $item = $buscarEvento->buscaAgendaFull();
         <link href='includes/paginas/Agenda/css/personalizado.css' rel='stylesheet'/>
         <script type="text/javascript" src="includes/js/cardapio.js"></script>
         <script  type="text/javascript"src="includes/paginas/Agenda/js/sweet/sweetalert.min.js"></script>
-
-        <script type="text/javascript">
+</head>
+<body>
+<script type="text/javascript">
             $(document).ready(function() {
                 $('#calendar').fullCalendar({
                     header: {
@@ -46,9 +58,6 @@ $item = $buscarEvento->buscaAgendaFull();
                 });
             });
         </script>
-
-</head>
-<body>
     <section id="Geral" class=" m-0">
         <section class="container-fluid" >
             <form class="" method="POST">
@@ -112,17 +121,6 @@ $item = $buscarEvento->buscaAgendaFull();
         </div>
     </div>
 
-    <?php
-    if (isset($_POST['requisitar'])) {
-        if (isset($_POST['meuCar']) && isset($_POST['agenda'])) {
-            $cadatrarAgenda = new funcao;
-            $agenda = $cadatrarAgenda->agendar($_SESSION['codigo'], $_POST['meuCar'], $_POST['agenda']);
-            print_r($_SESSION['codigo']);
-        } else {
-            echo "<script> swal('prencha corretamente os campos!').then((value) => {location.assign('index.php')});</script>";
-        }
-    }
-    ?>
     <script src='includes/paginas/Agenda/js/moment.min.js'></script>
     <script src='includes/paginas/Agenda/js/fullcalendar.min.js'></script>
     <script src='includes/paginas/Agenda/locale/pt-br.js'></script>

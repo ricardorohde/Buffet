@@ -1,6 +1,6 @@
-<header class="row fixed-top p-2 m-0" id="cabecalho-menu">
+<header class="row fixed-top p-2 m-0 border-top border-bottom border-dark" id="cabecalho-menu">
     <nav class="col-12 navbar navbar-expand-md navbar-dark m-0 p-0">
-        <a class="navbar-brand h1 mb-0" href="index.php">
+        <a class="navbar-brand h1 mb-0 pl-2" href="index.php">
             <small>
                 <i class="fa fa-home"></i>
             </small> Inicio

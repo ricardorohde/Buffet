@@ -80,7 +80,7 @@
 
                 <hr class="hr">
                 <div class="row container" id="img_5">
-                    <a href="#footer">
+                    <a href="tel:+55-18-3282-2304">
                         <div class="contariner anime " id="seguraIMG">
                             <label class="h5 text-danger">Entre em contato</label>
                             <img src="includes/img/contato.png" id="img-img4" />

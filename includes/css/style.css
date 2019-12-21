@@ -41,7 +41,7 @@
 #cabecalho-menu {
     background: #ff4040;
     top: 0;
-    z-index: 1;
+    z-index: 5;
 }
 
 #cabecalho-textoelogo {
@@ -278,7 +278,6 @@
 
 #footer {
     width: 100%;
-    height: 150px;
     background: #ff4040;
     color: white;
 }
