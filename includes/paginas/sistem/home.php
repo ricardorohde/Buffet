@@ -80,7 +80,7 @@
 
                 <hr class="hr">
                 <div class="row container" id="img_5">
-                    <a href="tel:+55-18-3282-2304">
+                    <a href="#footer">
                         <div class="contariner anime " id="seguraIMG">
                             <label class="h5 text-danger">Entre em contato</label>
                             <img src="includes/img/contato.png" id="img-img4" />
@@ -141,3 +141,71 @@
 
     </article>
 </section>
+<footer style="background:#000;" class="container-fluid pt-4 pb-4 m-0">
+                <div class="container mx-auto rounded p-0 m-0">
+                    <div class="row m-0 p-0">
+                        <div class="col-12 p-0 m-0 text-white">
+                            <h1>Contato</h1><hr style="border: 1px solid #fff;" />
+                        </div>
+                    </div>
+                    <div class="row m-0 p-0">
+                        <div class="col-md-6 col-lg-8">
+                            <div class="row m-0 pb-4">
+                                <div class="col-12 text-justify text-white">
+                                        <h5>
+                                            Rua: Benicio Mendonca Filho, 1541, Vila Furlan, Teodoro Sampaio,
+SP, CEP 19.280-000, Brasil.
+                                        </h5>
+                                        <a href="tel:+55-18-32823474">
+                                            <button type="button" class="form-control btn btn-success">
+                                                <i class="fa fa-phone-square-alt"></i> Ligue Agora
+                                            </button>
+                                        </a>
+                                </div>
+                            </div>
+                            <div class="row m-0">
+                                <div class="col-12 text-center">
+                                    <iframe class="rounded w-100 mx-auto" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3685.1481345162756!2d-52.165310349710474!3d-22.53612298512888!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94924fc6eb0d5a99%3A0x64fe4e848139220b!2sCongrega%C3%A7%C3%A3o%20Crist%C3%A3%20no%20Brasil%20-%20Vila%20Furlan!5e0!3m2!1spt-BR!2sbr!4v1576892320474!5m2!1spt-BR!2sbr" height="400"  frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <div class="col-md-6 col-lg-4 pt-4 pt-md-0">
+                            <div class="row m-0">
+                                <div class="col-md-12 text-white">
+                                    <label for="texto">Identificação</label>
+                                    <input class="form-control" type="text" name="nome" placeholder="Nome completo"/>
+                                </div>
+                            </div>
+                                <div class="row m-0 text-white">
+                                    <div class="col-md-12 pt-2">
+                                        <label for="texto">Email</label>
+                                        <input class="form-control" type="email" name="email" placeholder="email@email.com"/>
+                                    </div>
+                                </div>
+                                <div class="row m-0 text-white">
+                                    <div class="col-md-12 pt-2">
+                                        <label for="texto">Celular</label>
+                                        <input class="form-control" type="tel" name="cell" placeholder='(00)0000-0000' />
+                                    </div>
+                                </div>
+                                <div class="row m-0 text-white">
+                                    <div class="col-md-12 pt-1">
+                                        <label for="texto">Motivo do contato?</label>
+                                        <textarea name="descContato" id="texto" cols="10" rows="10" class="form-control"></textarea>
+                                    </div>
+                                </div>
+                                <div class="row m-0">
+                                    <div class="col-1 m-0 p-0 mr-auto"></div>
+                                    <div class="col-md-12 pt-0 text-right">
+                                        <label for=""></label>
+                                        <button type="submit" class=" form-control btn btn-light btn-outline-success">
+                                            Enviar
+                                        </button>
+                                    </div>
+                                </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </footer>

@@ -47,7 +47,7 @@ $item = $buscarEvento->buscaAgendaFull();
     
 </head>
 <body>
-    <section id="Geral" class=" m-0">
+    <section id="Geral" class="m-0">
         <section class="container-fluid" >
             <form class="" method="POST">
                 <div class="row pb-2" id="formulario">
