@@ -11,6 +11,18 @@ class Conexao {
     private $debug; //Verificação de erros
 
     function __construct() {
+
+        /*
+            $this->conn = false;
+            $this->host = "localhost";
+            $this->user = "u396578189_corado";
+            $this->password = "corado40";
+            $this->baseName = "u396578189_corado";
+            $this->port = "3306";
+            $this->debug = true;
+            $this->connect();
+        */
+
         $this->conn = false;
         $this->host = "localhost";
         $this->user = "root";

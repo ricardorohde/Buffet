@@ -20,12 +20,50 @@ if (isset($_GET['sair'])) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>ACN-Fest</title>
         <script src="//code.jquery.com/jquery-2.0.3.min.js"></script>
-        <script src="includes/node_modules/jquery/dist/jquery.min.js"></script>
+        <script src="includes/node_modules/jquery/dist/jquery.min.js">
+        </script><link rel="icon" href="includes/img/icon.svg" sizes="any" type="image/svg+xml">
         <link rel="stylesheet" type="text/css" href="includes/node_modules/bootstrap/compiler/bootstrap.css" />
         <link rel="stylesheet" type="text/css" href="includes/css/style.css" />
         <link rel="stylesheet" type="text/css" href="includes/icon/css/all.css" />
         <script type="text/javascript" src="includes/sweet/sweetalert.min.js"></script>
         <script src="includes/js/funcoes.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('.date').mask('00/00/0000');
+                $('.time').mask('00:00:00');
+                $('.date_time').mask('00/00/0000 00:00:00');
+                $('.cep').mask('00000-000');
+                $('.phone').mask('(00) 0000-0000', {placeholder: "(00) 0000-0000"});
+                $('.phone_cell').mask("(00) 00000-0000", {placeholder: "(00) 00000-0000"});
+                $('.phone_us').mask('(000) 000-0000');
+                $('.mixed').mask('AAA 000-S0S');
+                $('.cpf').mask('000.000.000-00', {reverse: true});
+                $('.cnpj').mask('00.000.000/0000-00', {reverse: true});
+                $('.money').mask('000.000.000.000.000,00', {reverse: true});
+                $('.money2').mask("#.##0,00", {reverse: true});
+                $('.ip_address').mask('0ZZ.0ZZ.0ZZ.0ZZ', {
+                    translation: {
+                    'Z': {
+                        pattern: /[0-9]/, optional: true
+                    }
+                    }
+                });
+                $('.ip_address').mask('099.099.099.099');
+                $('.percent').mask('##0,00%', {reverse: true});
+                $('.clear-if-not-match').mask("00/00/0000", {clearIfNotMatch: true});
+                $('.placeholder').mask("00/00/0000", {placeholder: "__/__/____"});
+                $('.fallback').mask("00r00r0000", {
+                    translation: {
+                        'r': {
+                        pattern: /[\/]/,
+                        fallback: '/'
+                        },
+                        placeholder: "__/__/____"
+                    }
+                    });
+                $('.selectonfocus').mask("00/00/0000", {selectOnFocus: true});
+            });
+        </script>
     </head>
 
     <body>
@@ -117,6 +155,7 @@ if (isset($_GET['sair'])) {
 
             <!-- Optional JavaScript -->
             <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+            <script src="./includes/js/jquery.mask.min.js"></script>
             <script src="includes/icon/js/all.js"></script>
             <script type="text/javascript" src="includes/js/UpdateScript.js"></script>
             <script src="includes/node_modules/popper.js/dist/umd/popper.min.js"></script>

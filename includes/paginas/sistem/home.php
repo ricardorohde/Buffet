@@ -11,7 +11,7 @@
 <article class="container-fluid pt-2 p-0 m-0" id="chmaratencao">
     <div class="row m-0 p-0" id="segura">
         <div class="col-4 d-none d-lg-block" id="coluna-1">
-            <div class="row container-fluid pt-2" id="img_1">
+            <div class="row container-fluid pt-2 m-0" id="img_1">
                 <a href="includes/paginas/galeria/">
                     <div class="contairner-fluid anime" id="seguraIMG">
                         <label class="h5 text-danger col-12">Variedade em pratos</label>
@@ -59,7 +59,7 @@
                             </label>
             </div>
         </div>
-        <div class="col-4 d-none d-lg-block  " id="coluna-3">
+        <div class="col-4 d-none d-lg-block" id="coluna-3">
             <?php
                     if (isset($_SESSION['codigo'])) {
                         echo '<a href="includes/paginas/Agenda/index.php"><div class="row container " id="img_4">
@@ -79,7 +79,7 @@
                     ?>
 
                 <hr class="hr">
-                <div class="row container" id="img_5">
+                <div class="row container m-0" id="img_5">
                     <a href="#footer">
                         <div class="contariner anime " id="seguraIMG">
                             <label class="h5 text-danger">Entre em contato</label>
@@ -186,7 +186,7 @@ SP, CEP 19.280-000, Brasil.
                                 <div class="row m-0 text-white">
                                     <div class="col-md-12 pt-2">
                                         <label for="texto">Celular</label>
-                                        <input class="form-control" type="tel" name="cell" placeholder='(00)0000-0000' />
+                                        <input class="form-control phone_cell" type="text" name="cell"  />
                                     </div>
                                 </div>
                                 <div class="row m-0 text-white">

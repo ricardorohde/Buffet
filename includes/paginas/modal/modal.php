@@ -78,13 +78,17 @@
                         <div class="row mt-2">
                             <span class="col-2 mt-1 text-danger">Celular</span>
 
-                            <div class="col-8 ml-2"><input type="text" name="celular" id="inputs" required="" maxlength="13" placeholder="(DDD) 99999 9999" onKeyPress="formatar('## #####-####', this);" /></div>
+                            <div class="col-8 ml-2">
+                                <input id="inputs" class="phone_cell" type="text" name="celular"/>
+                            </div>
 
                         </div>
 
                         <div class="row  mt-2">
                             <span class="col-2 mt-1 text-danger">Telefone</span>
-                            <div class="col-8 ml-2"><input type="text" name="telefone" id="inputs" required="" maxlength="12" placeholder="(DDD) 9999 9999" onKeyPress="formatar('## ####-####', this);" /></div>
+                            <div class="col-8 ml-2">
+                                <input id="inputs" class="phone" type="text" name="telefone" />
+                            </div>
                         </div>
                         <div class="row  mt-2">
                             <span class="col-2 mt-1 text-danger ">Endereço</span>
