@@ -297,8 +297,6 @@ class funcao extends Conexao {
                            <th>ingredientes</th>
                            <th><a data-toggle="modal" data-dismiss="modal" href="#" data-target="#mycardapioPronto" title="cadastrar Prato">+</a></th>
                            <th><a href="admin.php" id="EditarA" title="Fechar">X</a></th>
-                           
-                           
                         </tr>
                       </thead>
                       <tbody>';
@@ -1392,11 +1390,19 @@ class funcao extends Conexao {
 
             if ($i == 0) {
 
-                echo '<div class="item" id="cardapioControle">
-                        
+                echo '
+                    <div class="item" id="cardapioControle">
                         <div class="pad15" id="ola">
-                        <input type="radio" name="meuCar" value="' . $row['cf_codigo'] . '">
-                            <p class="lead">' . $resultado['cf_nome'] . '</p>';
+                            <div class="row bg-dark p-0">
+                                <div class="col-md-12 m-0 p-1">
+                                    <input type="radio" name="meuCar" value="' . $row['cf_codigo'] . '">
+                                </div>
+                            </div>
+                            <div class="row border rounded-bottom p-0">
+                                <div class="col-md-12 p-0 m-0">
+                                    <p class="lead m-0">' . $resultado['cf_nome'] . '</p>
+                                </div>
+                            </div>';
 
                 $query2 = "SELECT *FROM cardapio WHERE cf_codigo ={$row['cf_codigo']} ";
                 $resultado2 = $this->getAll($query2);
@@ -1409,9 +1415,10 @@ class funcao extends Conexao {
                     }
                 }
 
-
-                echo '</div>   
-                     </div>';
+                echo '
+                        </div>   
+                    </div>
+                ';
             } else {
                 $contaCardapio = 0;
                 for ($c = 0; $c < count($vet); $c++) {
@@ -1422,8 +1429,16 @@ class funcao extends Conexao {
                 if ($contaCardapio == 0) {
                     echo '<div class="item" id="cardapioControle">
                         <div class="pad15" id="ola">
-                        <input type="radio" name="meuCar" value="' . $row['cf_codigo'] . '">
-                            <p class="lead">' . $resultado['cf_nome'] . '</p>';
+                            <div class="row bg-dark p-0">
+                                <div class="col-md-12 m-0 p-1">
+                                    <input class="p-0 m-0" type="radio" name="meuCar" value="' . $row['cf_codigo'] . '">
+                                </div>
+                            </div>
+                            <div class="row border rounded-bottom p-0">
+                                <div class="col-md-12 p-0 m-0">
+                                    <p class="lead m-0">' . $resultado['cf_nome'] . '</p>
+                                </div>
+                            </div>';
 
                     $query2 = "SELECT *FROM cardapio WHERE cf_codigo ={$row['cf_codigo']} ";
                     $resultado2 = $this->getAll($query2);

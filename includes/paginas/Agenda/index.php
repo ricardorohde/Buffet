@@ -1,34 +1,38 @@
 <?php
-session_start();
 
 if(!isset($_SESSION['codigo'])){
     header('Location: ../../../index.php');
 }
 
-include_once("../../classes/Conexao.php");
-include_once('../../classes/Funcao.php');
-
 $buscarEvento = new funcao();
 $item = $buscarEvento->buscaAgendaFull();
+
+
+    if (isset($_POST['requisitar'])) {
+        if (isset($_POST['meuCar']) && isset($_POST['agenda'])) {
+            $cadatrarAgenda = new funcao;
+            $agenda = $cadatrarAgenda->agendar($_SESSION['codigo'], $_POST['meuCar'], $_POST['agenda']);
+            print_r($_SESSION['codigo']);
+        } else {
+            echo "<script> swal('prencha corretamente os campos!').then((value) => {location.assign('index.php')});</script>";
+        }
+    }
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
         <meta charset='utf-8' />
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        <link href="css/sytleCssIndex.css" rel="stylesheet"/>
-        <link rel="stylesheet" type="text/css" href="../../node_modules/bootstrap/compiler/bootstrap.css"/>
-        <link href='css/fullcalendar.min.css' rel='stylesheet' />
-        <link href='css/fullcalendar.print.min.css' rel='stylesheet' media='print'/>
-        <link href='css/personalizado.css' rel='stylesheet'/>
-        <script src="//code.jquery.com/jquery-2.0.3.min.js"></script>
-        <script src="../../node_modules/jquery/dist/jquery.min.js"></script>
-        <script type="text/javascript" src="../../jquery/jquery.min.js"></script>
-        <script src='js/jquery.min.js'></script>
-        <script type="text/javascript" src="../../js/cardapio.js"></script>
-        <script  type="text/javascript"src="js/sweet/sweetalert.min.js"></script>
-
-        <script type="text/javascript">
+        <link href="includes/paginas/Agenda/css/sytleCssIndex.css" rel="stylesheet"/>
+        <link href='includes/paginas/Agenda/css/fullcalendar.min.css' rel='stylesheet' />
+        <link href='includes/paginas/Agenda/css/fullcalendar.print.min.css' rel='stylesheet' media='print'/>
+        <link href='includes/paginas/Agenda/css/personalizado.css' rel='stylesheet'/>
+        <script type="text/javascript" src="includes/js/cardapio.js"></script>
+        <script  type="text/javascript"src="includes/paginas/Agenda/js/sweet/sweetalert.min.js"></script>
+</head>
+<body>
+<script type="text/javascript">
             $(document).ready(function() {
                 $('#calendar').fullCalendar({
                     header: {
@@ -54,35 +58,42 @@ $item = $buscarEvento->buscaAgendaFull();
                 });
             });
         </script>
-
-
-</head>
-<body>
-    <section id="Geral" class="border m-0">
+    <section id="Geral" class=" m-0">
         <section class="container-fluid" >
-            <form method="POST" action="">
-                <div class="row" id="formulario">
-                    <div class="MultiCarousel col-12 " data-items="1,3,5,6" data-slide="1" id="MultiCarousel"  data-interval="1000">
+            <form class="" method="POST">
+                <div class="row pb-2" id="formulario">
+                    <div class="col-md-8">
+                        <input class="form-control" name="agenda" type="datetime-local" id="inputData" title="esolha uma data"/> 
+                    </div>
+                    <div class="col-md-4">
+                        <button class="form-control btn btn-outline-dark" type="button" data-toggle="modal" data-dismiss="modal" data-target="#myagenda" id="modal" title="visualizar dias diponiveis">
+                            <small> <i class="fa fa-calendar-check"></i> Consultar Agenda</small>
+                        </button>
+                    </div>
+                </div>
+                <div class="row border pl-2 pr-2">
+                    <div class="MultiCarousel col-12" data-items="1,3,5,6" data-slide="1" id="MultiCarousel"  data-interval="1000">
                         <div class="MultiCarousel-inner" title="cardapios" >
                             <?php
-                            $exibirCardapio = new funcao();
-                            $item = $exibirCardapio->exibecar4();
-                            
+                                $exibirCardapio = new funcao();
+                                $item = $exibirCardapio->exibecar4();
                             ?>
                         </div>
-                        <button type="button"class="btn btn-primary leftLst"><</button>
-                        <button type="button" class="btn btn-primary rightLst">></button>
+                        <button type="button" class="badge badge-danger leftLst"><</button>
+                        <button type="button" class="badge badge-danger rightLst">></button>
                     </div>
-
-                    <div class="col-sm-5 col-xs-12  p-2 pl-4">
-                        <input name="agenda" type="datetime-local" id="inputData" title="esolha uma data"/> 
-                        <div  class="mt-2"data-toggle="modal" data-dismiss="modal" data-target="#myagenda" id="modal" title="visualizar dias diponiveis">agenda</div>
+                </div>
+                <div class="row border pt-2 pb-2">
+                    <div class="mr-auto"></div>
+                    <div class="col-12 col-md-2 p-1 pt-2 pt-md-0 text-center">
+                        <button class="form-control btn btn-success" type="submit" value="Requisitar" name="requisitar">
+                            Requisitar
+                        </button>
                     </div>
-                    <div class="col-sm-7 col-xs-12  p-2 " >
-
-                        <input type="submit" value="Requisitar" id="requisitar" name="requisitar" required=""> 
-                        <a  href="../../../"><input  class="mr-1"type="button" value="Voltar" id="requisitar" name="" required=""></a>
-
+                    <div class="col-12 col-md-2 p-1 pt-2 pt-md-0 text-center" >
+                        <a  href="index.php">
+                            <button class="form-control btn btn-dark mr-1"type="button" id="requisitar" required="">Voltar</button>
+                        </a>
                     </div>
                 </div>
             </form>
@@ -110,25 +121,9 @@ $item = $buscarEvento->buscaAgendaFull();
         </div>
     </div>
 
-    <?php
-    if (isset($_POST['requisitar'])) {
-        if (isset($_POST['meuCar']) && isset($_POST['agenda'])) {
-            $cadatrarAgenda = new funcao;
-            $agenda = $cadatrarAgenda->agendar($_SESSION['codigo'], $_POST['meuCar'], $_POST['agenda']);
-            print_r($_SESSION['codigo']);
-        } else {
-            echo "<script> swal('prencha corretamente os campos!').then((value) => {location.assign('index.php')});</script>";
-        }
-    }
-    ?>
-    <script src="../../node_modules/popper.js/dist/umd/popper.min.js"></script>
-    <script src="../../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src='js/moment.min.js'></script>
-    <script src='js/fullcalendar.min.js'></script>
-    <script src='locale/pt-br.js'></script>
-
-
-
+    <script src='includes/paginas/Agenda/js/moment.min.js'></script>
+    <script src='includes/paginas/Agenda/js/fullcalendar.min.js'></script>
+    <script src='includes/paginas/Agenda/locale/pt-br.js'></script>
 </body>
 
 </html>
